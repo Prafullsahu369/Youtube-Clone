@@ -23,6 +23,10 @@ import { SiStylelint } from "react-icons/si";
 import { MdPodcasts } from "react-icons/md";
 import { BiVideo } from "react-icons/bi";
 import { GiLinkedRings } from "react-icons/gi";
+import { IoSettingsSharp } from "react-icons/io5";
+import { MdOutlinedFlag } from "react-icons/md";
+import { IoIosHelpCircle } from "react-icons/io";
+import { RiFeedbackLine } from "react-icons/ri";
 function Sidebar() {
   const sidebarItems = [
     {
@@ -152,15 +156,37 @@ function Sidebar() {
       icon: <SiYoutubekids />,
     },
   ];
+  const sidebarItems5 = [
+    {
+      id: 1,
+      name: "Setting",
+      icon: <IoSettingsSharp />,
+    },
+    {
+      id: 2,
+      name: "repoirt history",
+      icon: <MdOutlinedFlag />,
+    },
+    {
+      id: 3,
+      name: "Help",
+      icon: <IoIosHelpCircle />,
+    },
+    {
+      id: 4,
+      name: "send feedback",
+      icon: <RiFeedbackLine />,
+    },
+  ];
   return (
-    <div className="px-4 w-[14%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden ">
+    <div className="px-4 w-[24%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden ">
       {/* Home */}
       <div className=" space-y-3 items-center">
         {sidebarItems.map((item) => {
           return (
             <div
               key={item.id}
-              className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1"
+              className="flex items-center space-x-5 hover:bg-gray-300 duration-300 rounded-xl p-1"
             >
               <div className="text-xl cursor-pointer">{item.icon}</div>
               <span className="cursor-pointer">{item.name}</span>
@@ -172,7 +198,7 @@ function Sidebar() {
       <hr />
       {/* You */}
       <div className="mt-4 space-y-3 items-center">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 hover:bg-gray-300 duration-300">
           <h1>You</h1>
           <FaChevronRight />
         </div>
@@ -192,7 +218,7 @@ function Sidebar() {
       <hr />
       {/* Explore */}
       <div className="mt-4 space-y-3 items-center">
-        <div className="items-center space-x-2">
+        <div className="items-center space-x-2 hover:bg-gray-300 duration-300">
           <h1 className=" font-semibold">Explore</h1>
         </div>
         {sidebarItems3.map((item) => {
@@ -212,7 +238,7 @@ function Sidebar() {
       {/* More section */}
       <div className="mt-4 space-y-3 items-center">
         <div className="items-center space-x-2">
-          <h1 className=" font-semibold">More From Youtube</h1>
+          <h1 className=" font-semibold  hover:bg-gray-300 duration-300 ">More From Youtube</h1>
         </div>
         {sidebarItems4.map((item) => {
           return (
@@ -221,6 +247,24 @@ function Sidebar() {
               className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1"
             >
               <div className="text-xl cursor-pointer text-red-500">
+                {item.icon}
+              </div>
+              <span className="cursor-pointer">{item.name}</span>
+            </div>
+          );
+        })}
+        <hr />
+      </div>
+      <br />
+      {/* setting section */}
+      <div className="mt-4 space-y-3 items-center">
+        {sidebarItems5.map((item) => {
+          return (
+            <div
+              key={item.id}
+              className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1"
+            >
+              <div className="text-xl cursor-pointer ">
                 {item.icon}
               </div>
               <span className="cursor-pointer">{item.name}</span>
