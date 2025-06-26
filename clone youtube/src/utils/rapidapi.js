@@ -1,5 +1,7 @@
 import axios from 'axios';
 const API_KEY = import.meta.env.VITE_RAPIDAPI_KEY;
+console.log(API_KEY);
+
 const BASE_URL = 'https://youtube138.p.rapidapi.com';
 const options = {
 	headers: {
